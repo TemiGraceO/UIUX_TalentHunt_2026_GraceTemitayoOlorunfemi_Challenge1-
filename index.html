@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmadu Bello University Zaria - Fast, Low-Bandwidth Academic and Research Discovery Portal" />
+  <title>Ahmadu Bello University, Zaria | Academic & Research Discovery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Top Notice Banner (Requirement 5: Announcements) -->
+  <div class="announcement-bar" role="region" aria-label="Important Announcements">
+    <span class="badge-gold">2026/2027 SESSION</span>
+    <span>Undergraduate, Postgraduate &amp; Distance Learning applications are open.</span>
+    <a href="#announcements">View Notices &rarr;</a>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Ahmadu Bello University Zaria Home">
+        <img src="abu-logo.png" alt="Ahmadu Bello University Zaria Crest" class="logo" width="44" height="44" />
+        <div>
+          <strong>Ahmadu Bello University</strong>
+          <small>Zaria &bull; Academic &amp; Research Discovery</small>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button id="liteModeBtn" class="btn-lite" type="button" aria-pressed="false" title="Toggle ultra-low bandwidth mode">
+          Data Saver: Off
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+          Menu
+        </button>
+      </div>
+
+      <nav id="mainNav" class="main-nav" aria-label="Primary Navigation">
+        <a href="#discovery">Programmes &amp; Research</a>
+        <a href="#scholars">Scholars</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#fees">Tuition &amp; Fees</a>
+        <a href="#support">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- Hero & Requirement 1: Global Search -->
+    <section id="discovery" class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <span class="eyebrow">Global Academic &amp; Research Gateway</span>
+          <h1>Discover Programmes, Research &amp; Faculty Experts in One Click</h1>
+          <p class="hero-sub">
+            Engineered for instant access across low-bandwidth connections. Search degrees, active grants, or researchers below.
+          </p>
+        </div>
+
+        <div class="search-panel" role="search">
+          <div class="search-input-row">
+            <label for="globalSearch" class="sr-only">Search programmes, research topics, categories, or staff</label>
+            <input
+              type="search"
+              id="globalSearch"
+              placeholder="Search by course (e.g. Computer Science), topic (Solar), or scholar (Dr. Musa)..."
+              autocomplete="off"
+            />
+            <select id="facultyFilter" aria-label="Filter by Faculty or Domain">
+              <option value="all">All Faculties &amp; Domains</option>
+              <option value="Physical Sciences & Computing">Physical Sciences &amp; Computing</option>
+              <option value="Agriculture & Biotechnology">Agriculture &amp; Biotechnology</option>
+              <option value="Engineering & Energy">Engineering &amp; Energy</option>
+              <option value="Health & Medical Sciences">Health &amp; Medical Sciences</option>
+              <option value="Social Sciences & Humanities">Social Sciences &amp; Humanities</option>
+            </select>
+          </div>
+
+          <div class="search-controls-bottom">
+            <div class="filter-pills" role="group" aria-label="Filter by content type">
+              <button class="pill active" data-filter="all">All Results</button>
+              <button class="pill" data-filter="programme">Programmes (UG/PG/DLC)</button>
+              <button class="pill" data-filter="research">Research &amp; Grants</button>
+              <button class="pill" data-filter="scholar">Scholars &amp; Staff</button>
+            </div>
+            <span id="resultCount" class="result-count" aria-live="polite">Showing 8 items</span>
+          </div>
+        </div>
+
+        <!-- Instant Search Results Grid -->
+        <div id="searchResults" class="results-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ABU Institutional Scale Strip -->
+    <section class="stats-strip" aria-label="University Key Statistics">
+      <div class="container stats-grid">
+        <div class="stat-item"><strong>18</strong><span>Faculties &amp; 110 Depts</span></div>
+        <div class="stat-item"><strong>550+</strong><span>UG, PG &amp; DLC Programmes</span></div>
+        <div class="stat-item"><strong>29</strong><span>Research Institutes &amp; Centres</span></div>
+        <div class="stat-item"><strong>22</strong><span>Registered Research Patents</span></div>
+      </div>
+    </section>
+
+    <!-- Requirement 2: Featured Scholars & Researchers -->
+    <section id="scholars" class="section bg-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Research Excellence</span>
+            <h2>Featured Scholars &amp; Principal Investigators</h2>
+            <p>Explore high-impact research groups and connect directly for academic supervision or grant partnerships.</p>
+          </div>
+        </div>
+        <div id="scholarsGrid" class="cards-grid"></div>
+      </div>
+    </section>
+
+    <!-- Requirement 3 & 5: Academic Calendar & Announcements -->
+    <section id="calendar" class="section">
+      <div class="container two-col">
+        <div>
+          <span class="section-kicker">Key Milestones</span>
+          <h2>2026/2027 Academic Calendar</h2>
+          <p class="section-desc">Important dates for admissions, semester lectures, and examinations.</p>
+          <ul class="calendar-list">
+            <li>
+              <span class="date-tag">12 Oct 2026</span>
+              <div>
+                <strong>First Semester Begins</strong>
+                <p>Online registration, screening, and course add/drop for fresh and returning students.</p>
+              </div>
+            </li>
+            <li>
+              <span class="date-tag">14 Dec 2026</span>
+              <div>
+                <strong>DRI Collaborative Grant Deadline</strong>
+                <p>Closing date for Directorate of Research &amp; Innovation (DRI) seed funding proposals.</p>
+              </div>
+            </li>
+            <li>
+              <span class="date-tag">08 Feb 2027</span>
+              <div>
+                <strong>First Semester Examinations</strong>
+                <p>University-wide CBT and written examinations across Samaru and Kongo campuses.</p>
+              </div>
+            </li>
+            <li>
+              <span class="date-tag">22 Mar 2027</span>
+              <div>
+                <strong>Second Semester Resumption</strong>
+                <p>Lectures commence across Undergraduate, Postgraduate, and Distance Learning tracks.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div id="announcements">
+          <span class="section-kicker">Official Bulletin</span>
+          <h2>Announcements &amp; Notifications</h2>
+          <p class="section-desc">Verified updates for prospective students, researchers, and funders.</p>
+          <article class="notice-card">
+            <div class="notice-meta"><span class="tag-green">Admissions</span> <time>Nov 2026</time></div>
+            <h3>2026/2027 Undergraduate &amp; Postgraduate Screening Open</h3>
+            <p>Applicants can verify departmental admission requirements and submit credentials via the unified portal.</p>
+          </article>
+          <article class="notice-card">
+            <div class="notice-meta"><span class="tag-gold">Research &amp; Grants</span> <time>Nov 2026</time></div>
+            <h3>West Africa Climate-Smart Agriculture Consortium</h3>
+            <p>Call for international co-investigators in Agronomy, Hydrology, and Renewable Microgrids for Q1 2027.</p>
+          </article>
+          <article class="notice-card">
+            <div class="notice-meta"><span class="tag-green">Open Access</span> <time>Oct 2026</time></div>
+            <h3>Kubanni Digital Repository Milestone</h3>
+            <p>Over 15,000 open-access theses, conference papers, and datasets are now indexed for low-bandwidth download.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirement 4: Financial Information (UG & PG) -->
+    <section id="fees" class="section bg-alt">
+      <div class="container">
+        <div class="section-head flex-between">
+          <div>
+            <span class="section-kicker">Transparent Schedule</span>
+            <h2>Tuition &amp; Student Fees (Demo Schedule)</h2>
+            <p>Compare annual sessional charges across Undergraduate, Postgraduate, and Distance Learning programmes.</p>
+          </div>
+          <div class="tab-switch" role="tablist" aria-label="Programme Fee Categories">
+            <button class="tab-btn active" data-tier="ug" role="tab" aria-selected="true">Undergraduate (UG)</button>
+            <button class="tab-btn" data-tier="pg" role="tab" aria-selected="false">Postgraduate (PG)</button>
+            <button class="tab-btn" data-tier="dlc" role="tab" aria-selected="false">Distance Learning (DLC)</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="fee-table">
+            <thead>
+              <tr>
+                <th>Faculty / Programme Category</th>
+                <th>Registration &amp; Tuition</th>
+                <th>Lab / Library / ICT</th>
+                <th>Total Per Session</th>
+              </tr>
+            </thead>
+            <tbody id="feeTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    </main>
+    </body>
+    </html>
